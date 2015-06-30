@@ -1,0 +1,19 @@
+# Sparql query
+SELECT ?rel ?Rack ?CommRoom ?Floor ?Building ?City ?Country ?Region
+WHERE
+{
+    ?Rack a <http://www.marc.com/classes#Rack>.
+    ?Rack ?rel ?CommRoom.
+    ?CommRoom a <http://www.marc.com/classes#CommRoom>.
+    ?CommRoom ?rel ?Floor.
+    ?Floor a <http://www.marc.com/classes#Floor>.
+    ?Floor ?rel ?Building.
+    ?Building a <http://www.marc.com/classes#Building>.
+    ?Building ?rel ?City.
+    ?City a <http://www.marc.com/classes#City>.
+    ?City ?rel ?Country.
+    ?Country a <http://www.marc.com/classes#Country>.
+    ?Country ?rel ?Region.
+    ?Region a <http://www.marc.com/classes#Region>.
+}
+limit 1000
